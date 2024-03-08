@@ -34,12 +34,13 @@ Welcome to the Blood Bank Management System! This web application is built to st
 ### Prerequisites
 
 - .NET 7 SDK: [Download .NET 7](https://dotnet.microsoft.com/download/dotnet/7.0)
-- Visual Studio or Visual Studio Code
-- Node.js and npm for frontend development
+- Visual Studio
+- EF core
+
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/blood-bank-management-system.git
+   git clone https://github.com/kandeel11/BLOODBANKMANAGMENTSYSTEM.git
