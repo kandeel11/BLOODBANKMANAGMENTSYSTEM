@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/AdminStyle.css"> <!-- Link to your custom styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="color: black;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a asp-controller="Home" asp-action="Index" class="navbar-brand" id="Bank_Images">
+            <img src="~/Images/medical.png" alt="MedicalImg" width="40" height="40">
+            Blood Bank & Donation Admin Panel
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" style="font-weight: bold; color: white;">
+                        <span class="glyphicon glyphicon-user"></span>&nbsp&nbsp User
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" style="background-color: #D6EAF8;">
+                        <a class="dropdown-item" asp-action="ChangePassword" asp-controller="BbManager" style="color: #DC7633;">
+                            Change Password
+                        </a>
+                        <a class="dropdown-item" asp-action="Index" asp-controller="Home" style="color: #D35400;">
+                            Logout
+                        </a>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+                <div class="sidebar-sticky">
+                    <!-- Add an icon for sidebar toggle -->
+                    <div id="sidebar-icon" class="text-center py-3">
+                        <span class="glyphicon glyphicon-menu-hamburger text-white"></span>
+                    </div>
+
+                    <ul class="nav flex-column">
+                        <a asp-action="Index" asp-controller="BbManager"><span class="glyphicon glyphicon-dashboard"></span>&nbsp&nbspDashboard</a>
+                        <a asp-action="AddDonor" asp-controller="BbManager"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbspAdd Donor</a>
+                        <a asp-action="AddHospital" asp-controller="BbManager"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbspAdd Main Hospital</a>
+                        <a asp-action="AddHos" asp-controller="BbManager"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbspAdd Hospital</a>
+
+                        <a asp-action="AddNurse" asp-controller="BbManager"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbspAdd Nurse</a>
+                        <a asp-action="AddFinder" asp-controller="BbManager"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbspAdd Diseaser Finder</a>
+
+                        <a asp-action="DonorList" asp-controller="BbManager"><span class="glyphicon glyphicon-list-alt"></span>&nbsp&nbsp Donor List</a>
+                        <a asp-action="HospitalList" asp-controller="BbManager"><span class="glyphicon glyphicon-check"></span>&nbsp&nbspShow Hospitals</a>
+                        <a asp-action="Contact" asp-controller="BbManager"><span class="glyphicon glyphicon-edit"></span>&nbsp&nbspUpdate Contact Info</a>
+
+                        <!-- Your sidebar links here -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Handle sidebar toggle on hover
+            $('#sidebar-icon').hover(function () {
+                $('.sidebar').toggleClass('d-none d-md-block');
+            });
+        });
+    </script>
+    <!-- Your scripts here -->
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

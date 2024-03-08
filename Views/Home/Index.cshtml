@@ -1,0 +1,321 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+@model List<BloodDonor>
+<style>
+    .Nbody {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-bx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: translateY(30px) scale(0.5);
+        transform-origin: top;
+    }
+
+        .img-bx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+    }
+
+        .content .detail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+            .content .detail h2 {
+                color: #444;
+                font-size: 1.6em;
+                font-weight: bolder;
+            }
+
+                .content .detail h2 span {
+                    font-size: 0.7em;
+                    color: #03a9f4;
+                    font-weight: bold;
+                }
+
+    .sci {
+        position: relative;
+        display: flex;
+        margin-top: 5px;
+    }
+
+        .sci li {
+            list-style: none;
+            margin: 4px;
+        }
+
+            .sci li a {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: transparent;
+                font-size: 1.5em;
+                color: #444;
+                text-decoration: none;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                transition: 0.5s;
+            }
+
+                .sci li a:hover {
+                    background: #03a9f4;
+                    color: #fff;
+                }
+
+    table {
+        font-family: Arial, sans-serif;
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js"
+        crossorigin="anonymous"></script>
+
+<body>
+    
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Images/_107317099_blooddonor976.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/Blood-facts_10-illustration-graphics__canteen.png" class="d-block w-100"
+                     alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/blood-donation.jpg" class="d-block w-100"
+                     alt="Third slide">
+                     
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/BloodKey.jpg" class="d-block w-100"
+                     alt="Fourth slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">The need for blood</div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Donating blood is a critical and life-saving act. Every few seconds, someone, somewhere,
+                            needs blood for various medical reasons. Your blood donation can make a significant
+                            difference in saving lives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">Blood Tips</div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            - Stay hydrated before donating blood.<br>
+                            - Get a good night's sleep before donating.<br>
+                            - Have a healthy meal before donating blood.<br>
+                            - After donating, rest for a while and have a snack to replenish energy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">Who you could Help</div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Your blood donation could help various individuals, including accident victims, patients
+                            undergoing surgery, cancer patients, and those with certain medical conditions. Your
+                            generosity can save lives and bring hope to those in need.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5">Blood Donor Names</h2>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-bordered" style="text-align:center">
+                    <thead style="text-align:center">
+                    <th style="text-align:center">Name</th>
+                    <th style="text-align:center">Age</th>
+                    <th style="text-align:center">Gender</th>
+                    <th style="text-align:center">Blood Group</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var donor in Model)
+                        {
+                            <tr>
+                                <td>@donor.BdName</td>
+                                <td>@donor.BdAge</td>
+                                <td>@donor.BdSex</td>
+                                <td>@donor.BdGroup</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+            <div>
+                <h1>Blood Transfusion Compatibility</h1>
+
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>A Donor</th>
+                        <th>B Donor</th>
+                        <th>AB Donor</th>
+                        <th>O Donor</th>
+                    </tr>
+                    <tr>
+                        <td><strong>A Recipient</strong></td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B Recipient</strong></td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AB Recipient</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O Recipient</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="~/Images/blood_donationcover.jpeg" alt="">
+            </div>
+
+        <hr class="my-4">
+
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h4>UNIVERSAL DONORS AND RECIPIENTS</h4>
+                <p>
+                    <!-- Content for "UNIVERSAL DONORS AND RECIPIENTS" section here -->
+                </p>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-secondary btn-block" asp-controller="Home" asp-action="BecomeDonor"
+                   style="background-color:#7FB3D5;color:#273746">Become a Donor</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="Nbody">
+        <div class="card">
+            <div class="img-bx">
+                
+            </div>
+            <div class="content">
+                <div class="detail">
+                    <h2>Mohameed Kandeel<br /><span>Back-End Developer</span></h2>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://www.facebook.com/KandeelMohameed241/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Mohamed15175918"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6ZuqO6AgCgPzLKEqqF7urT8fcFqonT2I70+12"
+            crossorigin="anonymous"></script>
+</body>

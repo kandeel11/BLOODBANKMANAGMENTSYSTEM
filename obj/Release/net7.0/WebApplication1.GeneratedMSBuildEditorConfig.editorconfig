@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApplication1
+build_property.RootNamespace = WebApplication1
+build_property.ProjectDir = G:\Data\fdownlaod\WebApplication1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\Data\fdownlaod\WebApplication1
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/AddDonor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEFkZERvbm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/AddHos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEFkZEhvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/AddHospital.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEFkZEhvc3BpdGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/AddNurse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEFkZE51cnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/DonorList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXERvbm9yTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/HospitalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEhvc3BpdGFsTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/NeedBloodList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXE5lZWRCbG9vZExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/Query.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXFF1ZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/BbManager/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmJNYW5hZ2VyXFNpZ25Jbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/About_US.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dF9VUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/BecomeDonor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCZWNvbWVEb25vci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/NeedBlood.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZWVkQmxvb2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/SearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Home/whyNeedBlood.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3aHlOZWVkQmxvb2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Data/fdownlaod/WebApplication1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx

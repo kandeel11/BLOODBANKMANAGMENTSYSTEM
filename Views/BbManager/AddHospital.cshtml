@@ -1,0 +1,74 @@
+﻿@model MainHospital
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Become Donor";
+}
+<body>
+    <div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+        <div class="container">
+            <div id="content-wrap" style="padding-bottom: 50px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="mt-4 mb-3">Donate Blood</h1>
+                    </div>
+                </div>
+                <form method="post" asp-action="AddHospital" asp-controller="BbManager">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Hospital Name<span style="color:red">*</span></div>
+                            <div><input asp-for="HospName" type="text" class="form-control" required></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">City<span style="color:red">*</span></div>
+                            <div><input asp-for="CityName" type="text" class="form-control" required></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Manager Id</div>
+                            <div><input asp-for="MId" type="number" class="form-control"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Blood Group<span style="color:red">*</span></div>
+                            <div>
+                                <select asp-for="BloodGroupId" class="form-control" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <!-- Add options here -->
+                                    <option value=7>O-</option>
+                                    <option value=8>O+</option>
+                                    <option value=2>A+</option>
+                                    <option value=1>A-</option>
+                                    <option value=5>B-</option>
+                                    <option value=6>B+</option>
+                                    <option value=4>AB+</option>
+                                    <option value=3>AB-</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Quantity for Blood<span style="color:red">*</span></div>
+                            <div><input asp-for="Quantity" type="number" class="form-control" required></div>
+                        </div>
+                    </div>
+             
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div>
+                                <input type="submit" asp-action="AddHospital" asp-controller="BbManager" class="btn btn-primary" value="Submit"
+                                       style="cursor:pointer">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <form method="post" asp-action="Index" asp-controller="Home" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-4" style="float:left">
+                    <button class="btn btn-primary" type="submit">Go to Login Page</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>

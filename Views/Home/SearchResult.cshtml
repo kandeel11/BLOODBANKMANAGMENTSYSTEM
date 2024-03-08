@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Search Result";
+}
+
+<body>
+    <div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+        <div class="container">
+            <div id="content-wrap" style="padding-bottom: 50px;">
+                <h1 class="mt-4 mb-3">Search Result</h1>
+
+                @if (ViewData["SearchResults"] != null)
+                {
+                    var results = ViewData["SearchResults"] as List<BloodDonor>;
+                    // Display the search results as a table
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Blood Group</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var result in results)
+                            {
+                                <tr>
+                                    <td>@result.BdName</td>
+                                    <td>@result.BdGroup</td>
+                                    <td>
+                                        <form asp-action="TakeBlood" asp-controller="Home" method="post">
+                                            <input type="hidden" name="donorId" value="@result.BdId" />
+                                            <button type="submit" class="btn btn-success">Take Blood</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>No results found.</p>
+                }
+            </div>
+        </div>
+    </div>
+</body>

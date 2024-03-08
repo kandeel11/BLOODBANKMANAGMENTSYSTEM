@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 lg-12 sm-12">
+                <h1 class="page-title">User Query</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-bordered" style="text-align:center">
+                <thead style="text-align:center">
+                <th style="text-align:center">S.no</th>
+                <th style="text-align:center">Name</th>
+                <th style="text-align:center">Email Id</th>
+                <th style="text-align:center">Mobile Number</th>
+                <th style="text-align:center">Message</th>
+                <th style="text-align:center">Posting Date</th>
+                <th style="text-align:center">Status</th>
+                <th style="text-align:center">Action</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><?php echo $count++; ?></td>
+                        <td><?php echo $row['query_name']; ?></td>
+                        <td><?php echo $row['query_mail']; ?></td>
+                        <td><?php echo $row['query_number']; ?></td>
+                        <td><?php echo $row['query_message']; ?></td>
+                        <td><?php echo $row['query_date']; ?></td>
+                        <td>Read<br></td>
+                        <td>
+                            <a onclick="clickme()"><b id="demo">Pending</b></a><br>
+
+
+                        </td>
+                        <td id="he" style="width:100px">
+                            <a style="background-color:aqua" >Delete </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive" style="text-align:center;align:center">
+
+            <ul class="pagination admin-pagination">
+                <li><a >Prev</a></li>
+                <li class=""><a>'1'</a></li>
+                <li><a >Next</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

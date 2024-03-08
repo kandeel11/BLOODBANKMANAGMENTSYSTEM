@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+    <div class="container">
+        <div id="content-wrap" style="padding-bottom: 50px;">
+            <h1 class="mt-4 mb-3">Contact</h1>
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <h3>Send us a Message</h3>
+                    <form name="sentMessage" method="post">
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>Full Name:</label>
+                                <input type="text" class="form-control" id="name" name="fullname" required>
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>Phone Number:</label>
+                                <input type="tel" class="form-control" id="phone" name="contactno" required>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>Message:</label>
+                                <textarea rows="10" cols="100" class="form-control" id="message" name="message" required maxlength="999" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" name="send" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h2>Contact Details</h2>
+                    <br>
+                    <p>
+                        <h4>Address :</h4> Tanta, Egypt
+                    </p>
+                    <p>
+                        <h4>Contact Number :</h4>+2-010-14-867-453
+                    </p>
+                    <p>
+                        <h4>Email: </h4><a href="mailto:Kandeelmohamed241@gmail.com">Kandeelmohamed241@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

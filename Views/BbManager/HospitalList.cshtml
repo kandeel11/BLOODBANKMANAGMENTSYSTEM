@@ -1,0 +1,37 @@
+﻿@model List<MainHospital>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Hospital List";
+}
+<div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+    <div class="container">
+        <div id="content-wrap" style="padding-bottom: 50px;">
+            <h1 class="mt-4 mb-3">Hospital List</h1>
+
+            <table class="table table-bordered">
+                <thead>
+
+                    <tr>
+                        <th>Hospital Name</th>
+                        <th>City</th>
+                        <th>Manager Id</th>
+                        <th>Blood Group</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var hospital in Model)
+                    {
+                        <tr>
+                            <td>@hospital.HospName</td>
+                            <td>@hospital.CityName</td>
+                            <td>@hospital.MId</td>
+                            <td>@hospital.BloodGroupId</td>
+                            <td>@hospital.Quantity</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

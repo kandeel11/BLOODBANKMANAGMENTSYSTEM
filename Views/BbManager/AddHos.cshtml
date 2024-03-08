@@ -1,0 +1,40 @@
+﻿@model Hospital
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Become Donor";
+}
+
+<div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+    <div class="container">
+<h2>Create New Hospital</h2>
+
+<form asp-action="AddHos" >
+            <div class="form-group">
+                    <div class="font-italic">Main Hospital <span style="color:red">*</span></div>
+                    <select asp-for="HospitalId" asp-items="@(new SelectList(ViewBag.HospitalList, "HospId", "HospName"))" class="form-control" required>
+                        <option value="">Select</option>
+                    </select>
+            </div>
+    <div class="form-group">
+        <label asp-for="HospitalName"></label>
+        <input asp-for="HospitalName" class="form-control" />
+        <span asp-validation-for="HospitalName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HospitalNeededBlood">HopitalID</label>
+        <input asp-for="HospitalNeededBlood" class="form-control" />
+        <span asp-validation-for="HospitalNeededBlood" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HospNeededQnty"></label>
+        <input asp-for="HospNeededQnty" class="form-control" />
+        <span asp-validation-for="HospNeededQnty" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input asp-action="AddHos" type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+</div>
+</div>

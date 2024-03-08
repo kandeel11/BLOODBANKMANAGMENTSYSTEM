@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "NeedBLood";
+}
+@model NeedBlood
+<body>
+    <div id="page-container" style="margin-top: 50px; position: relative; min-height: 84vh;">
+        <div class="container">
+            <div id="content-wrap" style="padding-bottom: 50px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="mt-4 mb-3">Blood Requist</h1>
+                    </div>
+                </div>
+                <form asp-action="NeedBlood" asp-controller="Home" method="post" id="search-form">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Full Name<span style="color:red">*</span></div>
+                            <div><input asp-for="NbName" type="text" class="form-control" required>
+                                <span asp-validation-for="NbName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Email Id</div>
+                            <div><input asp-for=NbEmail type="email" class="form-control"></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Reason, why do you need blood?<span style="color:red">*</span></div>
+                            <div><textarea asp-for="ReasonForNb" class="form-control"  required></textarea></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Age<span style="color:red">*</span></div>
+                            <div><input asp-for="NbAge" type="text"  class="form-control" required></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Gender<span style="color:red">*</span></div>
+                            <div>
+                                <select asp-for="Gender"  class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Blood Group<span style="color:red">*</span></div>
+                            <div>
+                                <select asp-for="BloodGroup"  class="form-control" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <!-- Add options here -->
+                                    <option value="O-">O-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B-">B-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Address<span style="color:red">*</span></div>
+                            <div><input asp-for="Address" type="text" class="form-control"  required></input></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Date<span style="color:red">*</span></div>
+                            <div><input asp-for="Date" type="date" class="form-control"  required></input></div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="font-italic">Hospital Name<span style="color:red">*</span></div>
+                            <select asp-for="HospitalId" asp-items="@(new SelectList(ViewBag.HospitalList, "HospitalNeededBlood", "HospitalName"))" class="form-control" required>
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div><input asp-action="NeedBlood" asp-controller="Home" type="submit" class="btn btn-primary" value="Search" style="cursor:pointer"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row" id="results"></div>
+            </div>
+        </div>
+    </div>
+    </body>

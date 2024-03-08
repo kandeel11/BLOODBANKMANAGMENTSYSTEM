@@ -1,0 +1,52 @@
+﻿@model List<BloodDonor>
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 lg-12 sm-12">
+                <h1 class="page-title">Donor List</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-bordered" style="text-align:center">
+                <thead style="text-align:center">
+                <th style="text-align:center">S.no</th>
+                <th style="text-align:center">Name</th>
+                <th style="text-align:center">Mobile Number</th>
+                <th style="text-align:center">Email Id</th>
+                <th style="text-align:center">Age</th>
+                <th style="text-align:center">Gender</th>
+                <th style="text-align:center">Blood Group</th>
+                <th style="text-align:center">Address</th>
+                <th style="text-align:center">Action</th>
+                </thead>
+                <tbody>
+                    @foreach (var donor in Model)
+                    {
+                        <tr>
+                            <td>@donor.BdId</td>
+                            <td>@donor.BdName</td>
+                            <td>@donor.Phone</td>
+                            <td>@donor.Email</td>
+                            <td>@donor.BdAge</td>
+                            <td>@donor.BdSex</td>
+                            <td>@donor.BdGroup</td>
+                            <td>@donor.CityName</td>
+                            <td id="he" style="width:100px">
+                                <a style="background-color:aqua"> Delete </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive" style="text-align:center;align:center">
+            <!-- Pagination can be added here if needed -->
+        </div>
+    </div>
+</div>
